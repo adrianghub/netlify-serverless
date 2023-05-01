@@ -8,7 +8,7 @@ const router = express.Router();
 
 app.use(express.json());
 
-router.get('/mod_03', (req, res) => {
+router.post('/mod_03', (req, res) => {
 
   const resultArray = req.body.map(item => item.result === 'true' ? 1 : 0);
   res.status(200).send(resultArray);
