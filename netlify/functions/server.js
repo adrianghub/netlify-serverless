@@ -7,8 +7,6 @@ const app = express();
 const router = express.Router();
 
 router.get('/mod_03', (req, res) => {
-  res.writeHead({ 'Content-Type': 'application/json' });
-  
   res.status(200).json({ output: req.body });
 });
 
