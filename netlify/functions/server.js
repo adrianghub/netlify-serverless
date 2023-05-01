@@ -7,9 +7,9 @@ const app = express();
 const router = express.Router();
 
 router.get('/mod_03', (req, res) => {
-  res.writeHead(200, { 'Content-Type': 'application/json' });
+  res.writeHead({ 'Content-Type': 'application/json' });
   
-  res.json({ output: req.body });
+  res.status(200).json({ output: req.body });
 });
 
 app.use('/.netlify/functions/server', router);  // path must route to lambda
